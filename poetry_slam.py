@@ -28,9 +28,15 @@ def  lines_printed_backwards(lines_list):
         line_num = lines_list_length - index
         print(f'{line_num} {line}')
 
+def lines_printed_random(lines_list):
+    for lines in lines_list:
+        print(choice(lines_list))
+
 # ------------------------------------------------
 
 woman_works_lines = get_file_lines("Woman Work by Maya Angelou.txt")
 
 # Test
 lines_printed_backwards(woman_works_lines)
+print("\n\n\n\n")
+lines_printed_random(woman_works_lines)
