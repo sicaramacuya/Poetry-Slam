@@ -6,8 +6,14 @@ def get_file_lines(filename):
    
     infile = open(filename, "r")
     file_lines = infile.readlines()
+
+    # this will get rid of \n in every element of the list
+    clean_file_lines = []
+    for lines in file_lines:
+        clean_file_lines.append(lines.strip())
+
     infile.close()
-    return file_lines
+    return clean_file_lines
 
 
 # ------------------------------------------------
