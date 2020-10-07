@@ -15,10 +15,22 @@ def get_file_lines(filename):
     infile.close()
     return clean_file_lines
 
+def  lines_printed_backwards(lines_list):
+    """Prints the list passed as a paamentrs backwards."""
+
+    # .reverse() will reverse the list
+    lines_list.reverse()
+    # len() will return an integer equaling the length of the list
+    lines_list_length = len(lines_list)
+
+    for index in range(lines_list_length):
+        line = lines_list[index]
+        line_num = lines_list_length - index
+        print(f'{line_num} {line}')
 
 # ------------------------------------------------
 
 woman_works_lines = get_file_lines("Woman Work by Maya Angelou.txt")
 
 # Test
-print(woman_works_lines)
+lines_printed_backwards(woman_works_lines)
