@@ -92,7 +92,6 @@ def lines_printed_custom(lines_list):
 
 woman_works_lines = get_file_lines("Woman Work by Maya Angelou.txt")
 
-# Test
 print("\nThe original poem:\n")
 for line in woman_works_lines:
     print(line)    
